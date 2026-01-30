@@ -9,7 +9,9 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const accountRoutes = require("./routes/account");
+const transactionRoutes = require("./routes/transaction");
 
 app.use("/api/v1/account", accountRoutes);
+app.use("/api/v1/transaction", transactionRoutes);
 
 module.exports = app;
