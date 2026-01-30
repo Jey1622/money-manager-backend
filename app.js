@@ -8,4 +8,8 @@ dotenv.config({path:path.join(__dirname,"config/config.env")});
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+const accountRoutes = require("./routes/account");
+
+app.use("/api/v1/account", accountRoutes);
+
 module.exports = app;
